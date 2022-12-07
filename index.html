@@ -8,14 +8,28 @@
 </head>
 <body>
     <div class="content">
+        
         <div class="header">
             <div class="title">TO DO LIST</div>
             <div class="searchbar">
-                <input type="search" placeholder="Bugün ne yapacağım?">
-                <button class="add-btn">Add</button>
+                <form>
+                    <input id="item" type="text" placeholder="What will I do today?">
+                    <!-- <button class="add-btn">Add</button> -->
+                    <input class="add-btn" type="submit" value="Add">
+                </form>
             </div>
-            
         </div>
+
+        <div class="list">
+            <li>
+                <ul></ul>
+            </li>  
+        </div>
+
+        <div class="clear-btn">
+            <button class="add-btn">Clear</button>
+        </div>
+        
         
     </div>
 

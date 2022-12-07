@@ -1,6 +1,5 @@
 .content {
     margin: auto;
-    max-height: 500px;
     max-width: 770px;
     display: flex;
     flex-direction: column;
@@ -27,13 +26,13 @@
     font-weight: bold;
 }
 
-input[type=search] {
+input[type=text] {
     width: 500px;
     height: 40px;
     font-size: 15px;
     border: 0px;
     outline: none;
-    padding-left: 5px;
+    padding-left: 10px;
 }
 
 .searchbar {
@@ -42,7 +41,7 @@ input[type=search] {
 }
 
 .add-btn {
-    height: 40px;
+    height: 42px;
     width: 80px;
     border: 0px;
     cursor: pointer;
@@ -54,4 +53,35 @@ input[type=search] {
 
 .add-btn:hover {
     background-color: darkgrey;
+}
+
+ul {
+    list-style-type: none;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    padding: 0px;
+    margin: -10px;
+    cursor: pointer;
+    
+}
+
+li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+ul li:nth-child(odd) {
+    background: #bab8b8;
+  }
+  
+ul li:hover {
+    background: #ddd;
+}
+  
+.list {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
 }
