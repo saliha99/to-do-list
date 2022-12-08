@@ -22,13 +22,16 @@ const liMaker = (text) => {
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
-
-
-
-    itemsArray.push(input.value);
-    localStorage.setItem('items', JSON.stringify(itemsArray));
-    liMaker(input.value);
-    input.value = "";
+    if(input.value!=""){
+        itemsArray.push(input.value);
+        localStorage.setItem('items', JSON.stringify(itemsArray));
+        liMaker(input.value);
+        console.log("Adding process complete!")
+        input.value = ""
+    }
+    else {
+        console.log("You can not adding process!")
+    }
 });
 
 data.forEach(item => {
@@ -36,9 +39,17 @@ data.forEach(item => {
 });
 
 button.addEventListener('click', function () {
-localStorage.clear();
-while (ul.firstChild) {
-    ul.removeChild(ul.firstChild);
-}
-itemsArray = [];
+    if(input.value=="")
+    {
+        localStorage.clear();
+        console.log("List cleared!")
+        while (ul.firstChild) {
+            ul.removeChild(ul.firstChild);
+        }
+        itemsArray = [];
+    }
+    else {
+        console.log("You cannot clear the list while typing!")
+    }
+    
 });
