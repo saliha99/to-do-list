@@ -53,3 +53,16 @@ button.addEventListener('click', function () {
     }
     
 });
+
+function myFunc() {
+    var y = document.getElementById("add-snackbar");
+    y.className = "show";
+    setTimeout(function(){ y.className = y.className.replace("show", ""); }, 3000);
+}
+
+function myFunction() {
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+

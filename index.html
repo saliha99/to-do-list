@@ -8,15 +8,18 @@
 </head>
 <body>
     <div class="content">
-        
         <div class="header">
             <div class="title">TO DO LIST</div>
+
             <div class="searchbar">
                 <form>
                     <input id="item" type="text" placeholder="What will I do today?">
                     <!-- <button class="add-btn">Add</button> -->
-                    <input class="add-btn" type="submit" value="Add">
-                    <button class="add-btn" type="button">Clear</button>
+                    <input onclick="myFunc()" class="add-btn" type="submit" value="Add">
+                    <div id="add-snackbar">Added to the list..</div>
+                    <button onclick="myFunction()" class="add-btn" type="button">Clear</button>
+                    <div id="snackbar">The list cleared..</div>
+
                 </form>
             </div>
         </div>
