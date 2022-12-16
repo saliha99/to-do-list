@@ -4,6 +4,7 @@ const form = document.querySelector('form');
 const ul = document.querySelector('ul');
 const button = document.querySelector('button');
 
+
 // localStoragede tutulabilmesi için obje olarak saklmamız lazım = JSON.parse ile
 let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : []
 
@@ -18,6 +19,16 @@ const liMaker = (text) => {
     const li = document.createElement('li');
     li.textContent = text;
     ul.appendChild(li);
+
+    li.addEventListener('click', ()=>{
+        li.classList.toggle("completed")
+    })
+
+    li.addEventListener('contextmenu',(e)=>{
+        e.preventDefault();
+        li.remove();
+    })
+
 }
 
 form.addEventListener('submit', function (e) {
@@ -55,14 +66,21 @@ button.addEventListener('click', function () {
 });
 
 function myFunc() {
-    var y = document.getElementById("add-snackbar");
-    y.className = "show";
-    setTimeout(function(){ y.className = y.className.replace("show", ""); }, 3000);
+    if(input.value!="")
+    {
+        var y = document.getElementById("add-snackbar");
+        y.className = "show";
+        setTimeout(function(){ y.className = y.className.replace("show", ""); }, 3000);
+    }
+
 }
 
 function myFunction() {
-    var x = document.getElementById("snackbar");
-    x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    if(itemsArray.length!=0 && input.value =="") {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+
 }
 

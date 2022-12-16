@@ -13,7 +13,7 @@
 
             <div class="searchbar">
                 <form>
-                    <input id="item" type="text" placeholder="What will I do today?">
+                    <input id="item" type="text" placeholder="What will I do today?" autocomplete="off">
                     <!-- <button class="add-btn">Add</button> -->
                     <input onclick="myFunc()" class="add-btn" type="submit" value="Add">
                     <div id="add-snackbar">Added to the list..</div>
@@ -25,10 +25,12 @@
         </div>
 
         <div class="list">
-            <ul class="ul-list">
+
+            <ul class="ul-list" >
                 <li class="li-list"></li>
             </ul>
         </div>
+        <span>Right-click on the item you want to delete.</span>
 
     </div>
 
