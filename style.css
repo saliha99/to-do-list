@@ -123,17 +123,16 @@ ul li:hover {
 #snackbar {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
-    background-color: rgb(224, 206, 223);
+    background-color: rgb(239 236 239);
     color: #fff;
     text-align: center;
     border-radius: 2px;
-    padding: 16px;
+    padding: 15px;
     position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
+    left: 70%;
+    top: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
   }
   
   #snackbar.show {
@@ -145,17 +144,16 @@ ul li:hover {
   #add-snackbar {
     visibility: hidden;
     min-width: 250px;
-    margin-left: -125px;
-    background-color: rgb(224, 206, 223);
+    background-color: rgb(239 236 239);
     color: #fff;
     text-align: center;
     border-radius: 2px;
-    padding: 16px;
+    padding: 15px;
     position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
+    left: 70%;
+    top: 10px;
+    font-size: 20px;
+    font-family: sans-serif;
   }
 
   #add-snackbar.show {
@@ -170,4 +168,10 @@ span {
     font-family: sans-serif;
     font-size: x-small;
     margin-top: 5px;
+}
+
+.footer-note {
+    position: absolute;
+    bottom: 10px;
+    width: 50%
 }
